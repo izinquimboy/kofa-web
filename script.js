@@ -1,7 +1,19 @@
-const replies = {
-  returns: { greeting: 'Hi there,', text: 'Thanks for reaching out! We’re happy to help with a return. You can bring your item by the shop within 30 days, or reply here with your order number and we’ll walk you through the next step.', signoff: 'See you soon,<br />The shop team' },
-  sizing: { greeting: 'Hi there,', text: 'Happy to help you find the right fit. Let us know which piece you’re looking at and how you like things to fit, and we’ll send over the measurements and our best recommendation.', signoff: 'Talk soon,<br />The shop team' },
-  hours: { greeting: 'Hi there,', text: 'Thanks for checking in! Our current hours are listed on our website and Instagram, where we also post any changes for holidays or special events. We hope to see you in the shop soon.', signoff: 'See you soon,<br />The shop team' }
+const sections = {
+  home: {
+    label: '01 / HOME',
+    heading: 'Make a good first impression.',
+    text: 'Tell people who you are, what you do, and why they should choose you. A clear introduction and a strong photo can do a lot of the work.'
+  },
+  services: {
+    label: '02 / SERVICES',
+    heading: 'Show what you offer.',
+    text: 'Give customers a straightforward look at your services or products, with enough detail to help them know whether you’re the right fit.'
+  },
+  contact: {
+    label: '03 / CONTACT',
+    heading: 'Make the next step easy.',
+    text: 'Put your location, hours, phone number, email, or inquiry link where people can actually find them. No hunting through old social posts.'
+  }
 };
 
 document.querySelectorAll('.question').forEach(button => {
@@ -11,10 +23,11 @@ document.querySelectorAll('.question').forEach(button => {
       option.classList.toggle('active', selected);
       option.setAttribute('aria-pressed', String(selected));
     });
-    const reply = replies[button.dataset.reply];
-    document.querySelector('#reply-greeting').textContent = reply.greeting;
-    document.querySelector('#reply-text').textContent = reply.text;
-    document.querySelector('#reply-signoff').innerHTML = reply.signoff;
+
+    const section = sections[button.dataset.section];
+    document.querySelector('#preview-label').textContent = section.label;
+    document.querySelector('#preview-heading').textContent = section.heading;
+    document.querySelector('#preview-text').textContent = section.text;
   });
 });
 

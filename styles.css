@@ -30,7 +30,7 @@ img { display: block; width: 100%; }
 .hero-bottom { position: absolute; bottom: 15px; left: 15px; right: 15px; display: flex; justify-content: space-between; }
 
 .section-grid { display: grid; grid-template-columns: minmax(0, 24fr) minmax(0, 42fr) minmax(0, 34fr); column-gap: 24px; padding: 0 15px; }
-.section-side, .about-text, .about-photo, .service-rows, .example-picker, .sample-reply,
+.section-side, .about-text, .about-photo, .service-rows, .example-picker, .site-preview,
 .package-main, .package-details, .faq-list, .contact-main, .contact-note { border-top: 1px solid var(--rule); }
 .section-side h2 { padding-top: 28px; }
 
@@ -48,24 +48,28 @@ img { display: block; width: 100%; }
 .service-row p { max-width: 620px; padding-right: 4%; font-size: clamp(17px, 1.1vw, 21px); line-height: 1.3; }
 
 .example { padding-bottom: 145px; }
-.example-picker, .sample-reply, .package-main, .package-details, .contact-main, .contact-note { padding-top: 29px; }
+.example-picker, .site-preview, .package-main, .package-details, .contact-main, .contact-note { padding-top: 29px; }
 .example-picker > p { max-width: 370px; font-size: 19px; line-height: 1.3; }
 .question-list { margin-top: 85px; max-width: 470px; border-top: 1px solid var(--rule); }
 .question { display: flex; width: 100%; justify-content: space-between; align-items: center; text-align: left; padding: 16px 0; border: 0; border-bottom: 1px solid var(--rule); background: transparent; color: var(--ink); }
 .question:hover, .question.active { color: var(--red); }
 .question span { opacity: 0; font-size: 18px; font-weight: 400; }
 .question.active span { opacity: 1; }
-.sample-reply { display: flex; flex-direction: column; min-height: 480px; font-size: clamp(17px, 1.1vw, 21px); line-height: 1.3; }
-.sample-reply p { max-width: 585px; margin-bottom: 22px; }
-.sample-reply small { display: block; max-width: 480px; margin-top: auto; font-size: 13px; line-height: 1.35; }
+.site-preview { display: flex; flex-direction: column; min-height: 480px; font-size: clamp(17px, 1.1vw, 21px); line-height: 1.3; }
+.site-preview p { max-width: 585px; margin-bottom: 22px; }
+.site-preview .preview-label { font-size: 16px; }
+.site-preview .preview-heading { font-size: clamp(28px, 3.1vw, 54px); line-height: 1.07; letter-spacing: -.04em; margin-top: 30px; }
+.site-preview small { display: block; max-width: 480px; margin-top: auto; font-size: 13px; line-height: 1.35; }
 
 .package { padding-bottom: 145px; }
 .package-name { margin-bottom: 12px; }
 .package-price { font-size: clamp(88px, 12vw, 220px); font-weight: 500; line-height: 1; letter-spacing: -.085em; margin-bottom: 40px; }
+.package-price span { display: block; margin-bottom: 12px; font-size: 16px; letter-spacing: 0; }
 .text-link { display: inline-block; border-bottom: 1px solid currentColor; padding-bottom: 4px; }
 .package-details > p { max-width: 510px; font-size: clamp(17px, 1.1vw, 21px); line-height: 1.3; }
 .package-details ul { padding: 0; margin: 60px 0 0; list-style: none; border-top: 1px solid var(--rule); }
 .package-details li { padding: 14px 0; border-bottom: 1px solid var(--rule); font-size: 16px; line-height: 1.3; }
+.package-details .package-fineprint { margin-top: 20px; font-size: 14px; }
 
 .faq { padding-bottom: 150px; }
 .faq-list { grid-column: 2 / 4; padding-top: 0; }
@@ -108,11 +112,11 @@ img { display: block; width: 100%; }
   .service-row { grid-template-columns: 35px 1fr; gap: 6px 10px; min-height: 0; padding: 18px 0 45px; }
   .service-row h3 { padding: 0; }
   .service-row p { grid-column: 2; margin-top: 18px; font-size: 17px; line-height: 1.4; }
-  .example-picker, .sample-reply, .package-main, .package-details, .contact-main, .contact-note { padding-top: 18px; }
+  .example-picker, .site-preview, .package-main, .package-details, .contact-main, .contact-note { padding-top: 18px; }
   .example-picker > p, .package-details > p, .contact-note p:first-child { font-size: 17px; }
   .question-list { margin: 35px 0 45px; max-width: none; }
-  .sample-reply { min-height: 0; padding-bottom: 25px; font-size: 17px; line-height: 1.4; }
-  .sample-reply small { margin-top: 20px; }
+  .site-preview { min-height: 0; padding-bottom: 25px; font-size: 17px; line-height: 1.4; }
+  .site-preview small { margin-top: 20px; }
   .package-main { padding-bottom: 45px; }
   .package-price { font-size: 100px; }
   .package-details ul { margin-top: 40px; }
