@@ -20,19 +20,27 @@ img { display: block; width: 100%; }
 
 .site-header { position: absolute; z-index: 2; top: 17px; left: 15px; }
 .site-header nav { display: flex; flex-direction: column; align-items: flex-start; }
-.site-header a, .hero-bottom, .section-side h2, .row-number, .service-row h3,
+.site-header a, .section-side h1, .section-side h2, .row-number, .service-row h2,
 .question, .package-name, .text-link, .faq summary, .contact-note p:last-child,
 .site-footer { font-size: 16px; line-height: 1.35; font-weight: 500; }
 .site-header a:hover, .text-link:hover, .site-footer a:hover { color: var(--red); }
+.site-header a[aria-current="page"] { color: var(--red); }
 
-.hero { min-height: 100svh; min-height: max(760px, 100svh); position: relative; display: grid; place-items: center; }
+.hero { min-height: 100svh; position: relative; display: grid; place-items: center; }
+.hero-title { width: 100%; display: flex; justify-content: center; }
 .hero-logo { width: min(80vw, 1350px); height: min(30vw, 500px); object-fit: cover; object-position: center; mix-blend-mode: multiply; }
-.hero-bottom { position: absolute; bottom: 15px; left: 15px; right: 15px; display: flex; justify-content: space-between; }
+.manifesto { min-height: 100svh; display: grid; place-items: center; padding: 130px 20px 170px; border-top: 1px solid var(--rule); text-align: center; }
+.manifesto-copy { max-width: 900px; }
+.manifesto p { font-size: clamp(21px, 2.2vw, 34px); line-height: 1.25; letter-spacing: -.035em; font-weight: 500; margin-bottom: 1.2em; }
+.manifesto .manifesto-last { color: var(--red); margin-bottom: 1.7em; }
+.manifesto .text-link { font-size: 16px; }
+.manifesto .text-link span { margin-left: 12px; }
+.inner-page { padding-top: clamp(180px, 24vh, 320px); min-height: calc(100svh - 52px); }
 
 .section-grid { display: grid; grid-template-columns: minmax(0, 24fr) minmax(0, 42fr) minmax(0, 34fr); column-gap: 24px; padding: 0 15px; }
 .section-side, .about-text, .about-photo, .service-rows, .example-picker, .site-preview,
 .package-main, .package-details, .faq-list, .contact-main, .contact-note { border-top: 1px solid var(--rule); }
-.section-side h2 { padding-top: 28px; }
+.section-side h1, .section-side h2 { padding-top: 28px; }
 
 .about { padding-bottom: 100px; }
 .about-text { padding: 29px 10% 85px 0; }
@@ -44,7 +52,7 @@ img { display: block; width: 100%; }
 .service-rows { grid-column: 2 / 4; }
 .service-row { display: grid; grid-template-columns: 12% 44% 44%; min-height: 355px; padding: 29px 0 65px; border-bottom: 1px solid var(--rule); }
 .service-row:first-child { border-top: 0; }
-.service-row h3 { padding-right: 30px; }
+.service-row h2 { padding-right: 30px; }
 .service-row p { max-width: 620px; padding-right: 4%; font-size: clamp(17px, 1.1vw, 21px); line-height: 1.3; }
 
 .example { padding-bottom: 145px; }
@@ -97,20 +105,23 @@ img { display: block; width: 100%; }
 
 @media (max-width: 760px) {
   .site-header { top: 15px; }
-  .site-header a, .hero-bottom, .section-side h2, .row-number, .service-row h3,
+  .site-header a, .section-side h1, .section-side h2, .row-number, .service-row h2,
   .question, .package-name, .text-link, .faq summary, .contact-note p:last-child, .site-footer { font-size: 13px; }
-  .hero { min-height: 750px; }
   .hero-logo { width: 95vw; height: 36vw; }
+  .manifesto { padding: 100px 20px 120px; }
+  .manifesto p { font-size: clamp(20px, 5vw, 28px); line-height: 1.3; }
+  .manifesto .text-link { font-size: 13px; }
+  .inner-page { padding-top: 200px; }
   .section-grid { display: block; padding: 0 15px; }
   .section-side { margin-bottom: 20px; }
-  .section-side h2 { padding-top: 16px; }
+  .section-side h1, .section-side h2 { padding-top: 16px; }
   .about { min-height: 0; padding-bottom: 90px; }
   .about-text { padding: 18px 0 25px; }
   .about-text p { font-size: 17px; line-height: 1.38; }
   .about-photo { width: 100%; height: auto; margin-top: 15px; }
   .services, .example, .package, .faq, .contact { padding-bottom: 90px; }
   .service-row { grid-template-columns: 35px 1fr; gap: 6px 10px; min-height: 0; padding: 18px 0 45px; }
-  .service-row h3 { padding: 0; }
+  .service-row h2 { padding: 0; }
   .service-row p { grid-column: 2; margin-top: 18px; font-size: 17px; line-height: 1.4; }
   .example-picker, .site-preview, .package-main, .package-details, .contact-main, .contact-note { padding-top: 18px; }
   .example-picker > p, .package-details > p, .contact-note p:first-child { font-size: 17px; }

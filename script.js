@@ -31,4 +31,6 @@ document.querySelectorAll('.question').forEach(button => {
   });
 });
 
-document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelectorAll('.year').forEach(year => {
+  year.textContent = new Date().getFullYear();
+});
