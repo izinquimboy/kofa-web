@@ -19,7 +19,7 @@ img { display: block; width: 100%; }
 .skip-link:focus { top: 10px; }
 
 .site-header { position: absolute; z-index: 2; top: 17px; left: 15px; }
-.site-header nav { display: flex; flex-direction: column; align-items: flex-start; }
+.site-header nav { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
 .site-header a, .section-side h1, .section-side h2, .row-number, .service-row h2,
 .question, .package-name, .text-link, .faq summary, .contact-note p:last-child,
 .site-footer { font-size: 16px; line-height: 1.35; font-weight: 500; }
@@ -30,12 +30,12 @@ img { display: block; width: 100%; }
 .hero-title { width: 100%; display: flex; justify-content: center; }
 .hero-logo { width: min(80vw, 1350px); height: min(30vw, 500px); object-fit: cover; object-position: center; mix-blend-mode: multiply; }
 .manifesto { min-height: 100svh; display: grid; place-items: center; padding: 130px 20px 170px; border-top: 1px solid var(--rule); text-align: center; }
-.manifesto-copy { max-width: 900px; }
-.manifesto p { font-size: clamp(21px, 2.2vw, 34px); line-height: 1.25; letter-spacing: -.035em; font-weight: 500; margin-bottom: 1.2em; }
+.manifesto-copy { width: 100%; max-width: 780px; }
+.manifesto p { font-size: clamp(21px, 2.2vw, 34px); line-height: 1.3; letter-spacing: -.035em; font-weight: 500; margin-bottom: 1.3em; }
 .manifesto .manifesto-last { color: var(--red); margin-bottom: 1.7em; }
 .manifesto .text-link { font-size: 16px; }
 .manifesto .text-link span { margin-left: 12px; }
-.inner-page { padding-top: clamp(180px, 24vh, 320px); min-height: calc(100svh - 52px); }
+.inner-page { padding-top: clamp(200px, 26vh, 340px); min-height: calc(100svh - 52px); }
 
 .section-grid { display: grid; grid-template-columns: minmax(0, 24fr) minmax(0, 42fr) minmax(0, 34fr); column-gap: 24px; padding: 0 15px; }
 .section-side, .about-text, .about-photo, .service-rows, .example-picker, .site-preview,
